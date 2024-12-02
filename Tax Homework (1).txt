@@ -1,0 +1,20 @@
+﻿print("What is your yearly income?")
+income = int(input())
+print("How much do you pay for child care services?")
+childCare = int(input())
+print("How much have you paid in professional dues?")
+professionalDues = int(input())
+if childCare > 3000:
+    childCareReturns = 1050
+else:
+    childCareReturns = childCare*0.35
+tax = income - childCareReturns - professionalDues
+tax = tax - 14000
+tax = tax - 10000
+tax = tax*0.2
+tax = tax+1000
+if tax < 0:
+    tax = -tax
+    print("You will receive $", tax, "in taxes")
+else:
+    print("your tax will be $", tax)
